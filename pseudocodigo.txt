@@ -1,0 +1,52 @@
+clase Doctor:
+    propiedades:
+        - nombre
+        - especialidad
+        - citas_programadas []
+
+    método __init__(nombre, especialidad):
+        asignar nombre y especialidad
+        citas_programadas = []
+
+    método generar_cita(horario, propósito, prioridad):
+        crear nueva_cita con horario, propósito y prioridad
+        añadir nueva_cita a citas_programadas
+        retornar nueva_cita
+
+clase Paciente:
+    propiedades:
+        - nombre
+        - edad
+        - historial_medico
+
+    método __init__(nombre, edad, historial_medico):
+        asignar nombre, edad y historial_medico
+
+clase Cita:
+    propiedades:
+        - horario
+        - propósito
+        - prioridad
+
+    método __init__(horario, propósito, prioridad):
+        asignar horario, propósito y prioridad
+
+    método obtener_horario():
+        retornar horario
+
+    método obtener_propósito():
+        retornar propósito
+
+    método obtener_prioridad():
+        retornar prioridad
+
+# Ejemplo de uso:
+
+doctor1 = Doctor("Dr. Juan", "Cardiología")
+paciente1 = Paciente("Pablo", 35, "Hipertensión")
+
+cita1 = doctor1.generar_cita("05-04-2024 10:00", "Consulta de seguimiento", "Media")
+cita2 = doctor1.generar_cita("07-04-2024 11:30", "Examen de rutina", "Alta")
+
+print("Cita 1 - Horario:", cita1.obtener_horario(), "Propósito:", cita1.obtener_propósito(), "Prioridad:", cita1.obtener_prioridad())
+print("Cita 2 - Horario:", cita2.obtener_horario(), "Propósito:", cita2.obtener_propósito(), "
